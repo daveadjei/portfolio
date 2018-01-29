@@ -56,31 +56,31 @@
     // $teal:    #20c997 !global;
     // $cyan:    #17a2b8 !global;
 
-    // $colors: () !global;
-    // $colors: map-merge((
-    //   "blue":       $blue,
-    //   "indigo":     $indigo,
-    //   "purple":     $purple,
-    //   "pink":       $pink,
-    //   "red":        $red,
-    //   "orange":     $orange,
-    //   "yellow":     $yellow,
-    //   "green":      $green,
-    //   "teal":       $teal,
-    //   "cyan":       $cyan,
-    //   "white":      $white,
-    //   "gray":       $gray-600,
-    //   "gray-dark":  $gray-800
-    // ), $colors);
+    $colors: () !global;
+    $colors: map-merge((
+      "blue":       $blue,
+      "indigo":     $indigo,
+      "purple":     $purple,
+      "pink":       $pink,
+      "red":        $red,
+      "orange":     $orange,
+      "yellow":     $yellow,
+      "green":      $green,
+      "teal":       $teal,
+      "cyan":       $cyan,
+      "white":      $white,
+      "gray":       $gray-600,
+      "gray-dark":  #695245,
+    ), $colors);
 
-    $primary:       #695245 !global;
+    $primary:       #D9B3A4 !global;
     // $secondary:     $gray-600 !global;
     // $success:       $green !global;
     // $info:          $cyan !global;
     // $warning:       $yellow !global;
     // $danger:        $red !global;
     // $light:         $gray-100 !global;
-    // $dark:          $gray-800 !global;
+    $dark:          #695245 !global;
 
     // $theme-colors: () !global;
     // $theme-colors: map-merge((
@@ -149,7 +149,7 @@
     // Style anchor elements.
 
     // $link-color:                theme-color("primary") !global;
-    $link-decoration: underline;
+    $link-decoration: none;
     $link-decoration: $link-decoration !global;
     // $link-hover-color:          darken($link-color, 15%) !global;
     // $link-hover-decoration:     underline !global;
@@ -562,9 +562,9 @@
     // $navbar-toggler-font-size:          $font-size-lg !global;
     // $navbar-toggler-border-radius:      $btn-border-radius !global;
 
-    // $navbar-dark-color:                 rgba($white,.5) !global;
-    // $navbar-dark-hover-color:           rgba($white,.75) !global;
-    // $navbar-dark-active-color:          $white !global;
+    $navbar-dark-color:                 rgba(217,179,164,1) !global;
+    $navbar-dark-hover-color:           rgba(217,179,164,.75) !global;
+    $navbar-dark-active-color:          rgba(217,179,164,.8) !global;
     // $navbar-dark-disabled-color:        rgba($white,.25) !global;
     // $navbar-dark-toggler-icon-bg:       str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !global;
     // $navbar-dark-toggler-border-color:  rgba($white,.1) !global;
