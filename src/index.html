@@ -5,69 +5,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My portfolio</title>
-    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <a href="#content" class="accessible-hidden">Skip to main content</a>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
 
     <header>
-        <a href="index.html" class="logo-link">
-            <img src="img/logo.svg" alt="My portfolio, Aneta Webbie" width="80">
-        </a>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-                <li>
-                    <a href="#portfolio">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#about-me">About me</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
+        <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+            <a href="index.html" class="logo-link">
+                <img src="img/logo.svg" alt="My portfolio, David Adjei" width="80">
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" date-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" 7 aria-expanded="false" aria-label="Toggle navigaion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-uppercase" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="#about-me">About me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
     <main id="content">
-        <section class="section section--light">
-            <div class="jumbotron">
-                <h1>Hi, I am <strong>Aneta Webbie.</strong></h1>
-                <p>I’m a full-stack web developer.</p>
-            </div>
-        </section>
-        <section class="section">
-            <p class="claim">Let’s work together to make <strong>your produt stand out</strong>. I create beautiful and functional websites. I work with my clients step by step <strong>from the idea until the fully functioning web application</strong>.</p>
-        </section>
-        <section class="section section--dark section--promo">
-            <h1 class="sr-only">Promo</h1>
-            <article>
-                <h2>Discover</h2>
-                <p>Tell me about your project and we brainstorm together the features to create a plan for your product to launch.</p>
-            </article>
-            <article>
-                <h2>Design</h2>
-                <p>We design the wireframe and agree together how to create the best experience for your users to present your brand.</p>
-            </article>
-            <article>
-                <h2>Deploy</h2>
-                <p>We protoype and develop your product. We work together intensily to incorporate your feedback.</p>
-            </article>
-            <article>
-                <h2>Be Ready</h2>
-                <p>We deploy your product and now your website is ready to get the traction. Get out there and grow your audience.</p>
-            </article>
+        <div class="container container-fluid">
+            <section class="section section--light">
+                <div class="jumbotron">
+                    <h1>Hi, I am
+                        <strong>David Adjei.</strong>
+                    </h1>
+                    <p>I’m a full-stack web developer.</p>
+                </div>
+            </section>
+        </div>
+        <section class="container">
+            <p class="claim">Let’s work together to make
+                <strong>your produt stand out</strong>. I create beautiful and functional websites. I work with my clients step by
+                step
+                <strong>from the idea until the fully functioning web application</strong>.</p>
         </section>
 
-        <section id="skills" class="section section--light">
+        <section class="container section--dark section--promo">
+            <h1 class="sr-only">Promo</h1>
+            <div class="row">
+                <div class="col-md-3">
+
+                    <article>
+                        <h2>Discover</h2>
+                        <p>Tell me about your project and we brainstorm together the features to create a plan for your product
+                            to launch.</p>
+                    </article>
+                </div>
+
+                <div class="col-md-3">
+                    <article>
+                        <h2>Design</h2>
+                        <p>We design the wireframe and agree together how to create the best experience for your users to present
+                            your brand.
+                        </p>
+                    </article>
+                </div>
+                <div class="col-md-3">
+
+                    <article>
+                        <h2>Deploy</h2>
+                        <p>We protoype and develop your product. We work together intensily to incorporate your feedback.</p>
+                    </article>
+                </div>
+                <div class="col-md-3">
+
+                    <article>
+                        <h2>Be Ready</h2>
+                        <p>We deploy your product and now your website is ready to get the traction. Get out there and grow your
+                            audience.</p>
+                    </article>
+                </div>
+
+
+
+
+        </section>
+
+        <section id="skills" class="container section--light">
             <h2>My Skills</h2>
             <ul>
                 <li>HTML 80 % </li>
@@ -81,7 +118,7 @@
             </ul>
         </section>
 
-        <section id="portfolio" class="section section--primary">
+        <section id="portfolio" class="container section--primary">
             <h2>My Portfolio</h2>
 
             <h3>Website for a coffee shop</h3>
@@ -103,17 +140,17 @@
             <p>Explore</p>
         </section>
 
-        <section id="about-me" class="section">
+        <section id="about-me" class="container">
             <h2>About Me</h2>
             <div class="about">
                 <div class="about-image">
                     <img src="http://satyr.io/300/red" alt="It’s me, Aneta Webbie">
                 </div>
                 <div class="about-text">
-                    <p>My name is Aneta Webbie. I am a full-stack web developer and enjoy learning new trends. I am developing user
-                        interfaces in JavaScript and React and backend of my projects in PHP and Laravel.</p>
-                    <p>I am open to learning new technologies and enjoy working with people who are as passionate about all web-related
-                        as me.</p>
+                    <p>My name is Aneta Webbie. I am a full-stack web developer and enjoy learning new trends. I am developing
+                        user interfaces in JavaScript and React and backend of my projects in PHP and Laravel.</p>
+                    <p>I am open to learning new technologies and enjoy working with people who are as passionate about all
+                        web-related as me.</p>
                     <p>I have worked for clients all across the world but currently I am based in Prague, Czech Republic.</p>
                     <p>I like cats, gaming, and snowboarding. If I do not develop, you can also meet me trekking in the mountains.</p>
                     <p>Get in touch and let's do something great together.</p>
@@ -121,7 +158,7 @@
             </div>
         </section>
 
-        <section id="contact" class="section section--dark">
+        <section id="contact" class="container section--dark">
             <h2>Find Me Here</h2>
             <a href="#">GitHub</a>
             <a href="#">Linked In</a>
@@ -129,7 +166,7 @@
             NICE TO MEET YOU!
         </section>
 
-        <section id="contact" class="section section--primary">
+        <section id="contact" class="container section--primary">
             <h2>Contact me</h2>
             <p>First Name * Last Name * Email * Phone Send my message My message *</p>
         </section>
