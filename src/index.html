@@ -8,6 +8,9 @@
 
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.appear.js"></script>
+
 </head>
 
 <body>
@@ -112,66 +115,56 @@
 
         <section id="skills" class="container section--light">
             <h2>My Skills</h2>
-            <div class="progress mb-2">
-                    <div class="skill-label bg-dark"> HTML.......</div>
-                    <div class="progress-bar" role="progressbar" style="width:
-                    80%;" aria-valuenow="80" aria-valuemin="0"
-                    aria-valuemax="100">80%</div>
-                </div>
 
-                <div class="progress mb-2">
-                    <div class="skill-label bg-dark"> CSS, Sass</div>
-                    <div class="progress-bar" role="progressbar" style="width:
-                    80%;" aria-valuenow="25" aria-valuemin="0"
-                    aria-valuemax="100">80%</div>
-                </div>
+            <div class="all-progress">
+                <div class="my-progress">
 
-                <div class="progress mb-2">
-                    <div class="skill-label bg-dark"> JavaScript</div>
-                    <div class="progress-bar" role="progressbar" style="width:
-                    70%;" aria-valuenow="70" aria-valuemin="0"
-                    aria-valuemax="100">70%</div>
-                </div>
+                        <div class="bar" id="bar1">HTML</div>
+                        <div class="bar" id="bar2">CSS,Sass</div>
+                        <div class="bar" id="bar3">JavaScript</div>
+                        <div class="bar" id="bar4">React</div>
+                        <div class="bar" id="bar5">PHP</div>
+                        <div class="bar" id="bar6">Laravel</div>
+                        <div class="bar" id="bar7">UX</div>
+                        <div class="bar" id="bar8">jQuery</div>
 
-                <div class="progress mb-2">
-                    <div class="skill-label bg-dark"> React........</div>
-                    <div class="progress-bar" role="progressbar" style="width:
-                    60%;" aria-valuenow="60" aria-valuemin="0"
-                    aria-valuemax="100">60%</div>
                 </div>
-                <div class="progress mb-2">
-                        <div class="skill-label bg-dark"> PHP...........</div>
-                        <div class="progress-bar" role="progressbar" style="width:
-                        60%;" aria-valuenow="60" aria-valuemin="0"
-                        aria-valuemax="100">60%</div>
-                    </div>
-                    <div class="progress mb-2">
-                            <div class="skill-label bg-dark"> Laravel......</div>
-                            <div class="progress-bar" role="progressbar" style="width:
-                            60%;" aria-valuenow="60" aria-valuemin="0"
-                            aria-valuemax="100">60%</div>
-                        </div>
-                <div class="progress mb-2">
-                    <div class="skill-label bg-dark"> UX.............</div>
-                    <div class="progress-bar" role="progressbar" style="width:
-                    50%;" aria-valuenow="50" aria-valuemin="0"
-                    aria-valuemax="100">50%</div>
-                </div>
-                <div class="progress mb-2">
-                        <div class="skill-label bg-dark"> jQuery.......</div>
-                        <div class="progress-bar" role="progressbar" style="width:
-                        70%;" aria-valuenow="70" aria-valuemin="0"
-                        aria-valuemax="100">70%</div>
-                    </div>
+            </div>
+
+
+
 
         </section>
+
+        <script>
+            $('.my-progress').appear();
+
+            function progress(barID, value) {
+                $(barID).animate({
+                    'width': value
+                }, 500);
+            }
+
+            $('.my-progress').on('appear', function () {
+                progress('#bar1', '80%');
+                progress('#bar2', '80%');
+                progress('#bar3', '70%');
+                progress('#bar4', '60%');
+                progress('#bar5', '60%');
+                progress('#bar6', '60%');
+                progress('#bar7', '50%');
+                progress('#bar8', '70%');
+
+
+            });
+        </script>
 
         <hr>
 
         <section id="portfolio" class="container section--primary">
             <h2>My Portfolio</h2>
 
-           <div class="row">
+            <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="card">
                         <h3 class="card-title">Website for a coffee shop</h3>
@@ -242,7 +235,7 @@
                         </div>
                     </div>
                 </div>
-           </div>
+            </div>
 
 
 
@@ -263,10 +256,12 @@
                         <h3>Hello!</h3>
                         <p>My name is David Adjei. I am a full-stack web developer and enjoy learning new trends. I am developing
                             user interfaces in JavaScript and React and backend of my projects in PHP and Laravel.</p>
-                        <p>I am open to learning new technologies and enjoy working with people who are as passionate about all
-                            web-related as me.</p>
+                        <p>I am open to learning new technologies and enjoy working with people who are as passionate about
+                            all web-related as me.</p>
                         <p>I have worked for clients all across the world but currently I am based in Prague, Czech Republic.</p>
-                        <p>I like cats, gaming, and snowboarding. If I do not develop, you can also meet me trekking in the mountains.</p>
+                        <p>I like cats, gaming, and snowboarding. If I do not develop, you can also meet me trekking in the
+                            mountains.
+                        </p>
                         <p>Get in touch and let's do something great together.</p>
                     </div>
                 </div>
@@ -279,10 +274,21 @@
             <h2>Find Me Here</h2>
 
             <div class="row icons text-center">
-                <div class="col-sm-4"><a href="https://github.com/daveadjei"><i class="fa fa-lg fa-git-square" aria-hidden="true"></i>
-                </a></div>
-                <div class="col-sm-4"><a href="https://www.linkedin.com/in/david-danquah-adjei-28685671/"><i class="fa fa-lg fa-linkedin-square" aria-hidden="true"></i></a></div>
-                <div class="col-sm-4"><a href="https://www.instagram.com/daveadjei/"><i class="fa fa-lg fa-instagram" aria-hidden="true"></i></a></div>
+                <div class="col-sm-4">
+                    <a href="https://github.com/daveadjei">
+                        <i class="fa fa-lg fa-git-square" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="https://www.linkedin.com/in/david-danquah-adjei-28685671/">
+                        <i class="fa fa-lg fa-linkedin-square" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="https://www.instagram.com/daveadjei/">
+                        <i class="fa fa-lg fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
 
         </section>
@@ -291,53 +297,49 @@
 
         <section id="contact" class="container section--dark">
             <h2>Contact me</h2>
-            <form action="http://cbp.vosk-design.cz/process-form.php"
-                method="POST" class="form-contact">
+            <form action="http://cbp.vosk-design.cz/process-form.php" method="POST" class="form-contact">
 
-                    <div class="row">
-                        <div class="col-md-6 info">
-                            <label class="ml-4" for="firstname">First Name</label>
-                            <input class="mr-4" type="text" id="firstname" name="firstname"
-                            required>
-                        </div>
-                        <div class="col-md-6 info">
-                            <label class="ml-4"  for="lastname">Last Name</label>
-                            <input class="mr-4" type="text" id="lastname" name="lastname"
-                            required>
-                        </div>
+                <div class="row">
+                    <div class="col-md-6 info">
+                        <label class="ml-4" for="firstname">First Name</label>
+                        <input class="mr-4" type="text" id="firstname" name="firstname" required>
                     </div>
+                    <div class="col-md-6 info">
+                        <label class="ml-4" for="lastname">Last Name</label>
+                        <input class="mr-4" type="text" id="lastname" name="lastname" required>
+                    </div>
+                </div>
 
-                    <div class="row">
-                        <div class="col-md-6 info">
-                            <label class="ml-4" for="email">E-mail</label>
-                            <input class="mr-4" type="email" id="email" name="email"
-                            required>
-                        </div>
-                        <div class="col-md-6 info">
-                            <label class="ml-4" for="phone">Phone</label>
-                            <input class="mr-4" type="tel" id="phone" name="phone">
-                        </div>
+                <div class="row">
+                    <div class="col-md-6 info">
+                        <label class="ml-4" for="email">E-mail</label>
+                        <input class="mr-4" type="email" id="email" name="email" required>
                     </div>
+                    <div class="col-md-6 info">
+                        <label class="ml-4" for="phone">Phone</label>
+                        <input class="mr-4" type="tel" id="phone" name="phone">
+                    </div>
+                </div>
+                <br/>
+                <div class="text-center">
+                    <label for="message">Message</label>
                     <br/>
-                    <div class="text-center">
-                        <label for="message">Message</label>
-                        <br/>
-                        <textarea name="message" id="message" cols="30"
-                        rows="10"></textarea>
-                        <br/>
-                        <button class="btn btn-primary ">Send my message</button>
-                    </div>
-                </form>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    <br/>
+                    <button class="btn btn-primary ">Send my message</button>
+                </div>
+            </form>
         </section>
         <hr>
 
     </main>
 
     <footer class="text-center">
-           <h2>NICE TO MEET YOU!</h2>
+        <h2>NICE TO MEET YOU!</h2>
         <p>Copyright @David Adjei 2018</p>
     </footer>
-    <script src="js/jquery-3.3.1.min.js"></script>
+
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </body>

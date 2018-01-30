@@ -29,3 +29,18 @@ h2 {
     display: flex;
     justify-content: space-between;
 }
+
+
+.my-progress{
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+}
+
+
+.bar {
+    width: 0%;
+    height: 1.5rem;
+   background-color: #F0c484;
+   margin-bottom: 10px;
+}
