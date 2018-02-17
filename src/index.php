@@ -61,9 +61,9 @@
             </section>
         </div>
         <section class="container">
-            <p class="claim">Let’s work together to make
-                <strong>your produt stand out</strong>. I create beautiful and functional websites. I work with my clients step by
-                step
+            <p class="claim text-center">Let’s work together to make
+                <strong>your product stand out</strong>. I create beautiful and functional websites. I work with my clients step
+                by step
                 <strong>from the idea until the fully functioning web application</strong>.</p>
         </section>
 
@@ -116,57 +116,84 @@
         <section id="skills" class="container section--light">
             <h2>My Skills</h2>
 
-            <div class="row">
-
-
-                <div class="col-3">
-                    <div class="myLabel">HTML</div>
-                    <div class="myLabel">CSS,Sass</div>
-                    <div class="myLabel">JavaScript</div>
-                    <div class="myLabel">React</div>
-                    <div class="myLabel">PHP</div>
-                    <div class="myLabel">Laravel</div>
-                    <div class="myLabel">UX</div>
-                    <div class="myLabel">jQuery</div>
-                </div>
-
-
-
-
-
-                <div class="my-progress col-9">
-
-                    <div class="bar-container">
-                        <div class="bar" id="bar1">80%</div>
-                    </div>
-                    <div class="bar-container">
-                        <div class="bar" id="bar2">80%</div>
-                    </div>
-                    <div class="bar-container">
-                        <div class="bar" id="bar3">70%</div>
-                    </div>
-                    <div class="bar-container">
-                        <div class="bar" id="bar4">60%</div>
-                    </div>
-                    <div class="bar-container">
-                        <div class="bar" id="bar5">60%</div>
-                    </div>
-                    <div class="bar-container">
-                        <div class="bar" id="bar6">60%</div>
-                    </div>
-                    <div class="bar-container">
-                        <div class="bar" id="bar7">50%</div>
-                    </div>
-                    <div class="bar-container">
-                        <div class="bar" id="bar8">70%</div>
-
+            <div class="progress mb-1" style="height: 2rem">
+                <div class="progress-bar" id="bar1" data-progress="80%" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                    <div class="d-flex justify-content-between">
+                        <strong class="d-block px-2 bg-dark" style="height: 2rem">HTML</strong>
+                        <span class="px-2 h-100">80 %</span>
                     </div>
                 </div>
             </div>
+
+            <div class="progress mb-1" style="height: 2rem">
+                <div class="progress-bar" id="bar2" data-progress="80%" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                    <div class="d-flex justify-content-between">
+                        <strong class="d-block px-2 bg-dark" style="height: 2rem">CSS, Sass</strong>
+                        <span class="px-2 h-100">80 %</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="progress mb-1" style="height: 2rem">
+                <div class="progress-bar" id="bar3" data-progress="70%" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                    <div class="d-flex justify-content-between">
+                        <strong class="d-block px-2 bg-dark" style="height: 2rem">JavaScript</strong>
+                        <span class="px-2 h-100">70 %</span>
+                    </div>
+                </div>
+            </div>
+            <div class="progress mb-1" style="height: 2rem">
+                <div class="progress-bar" id="bar4" data-progress="60%" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                    <div class="d-flex justify-content-between">
+                        <strong class="d-block px-2 bg-dark" style="height: 2rem">React</strong>
+                        <span class="px-2 h-100">60 %</span>
+                    </div>
+                </div>
+            </div>
+            <div class="progress mb-1" style="height: 2rem">
+                <div class="progress-bar" id="bar5" data-progress="70%" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                    <div class="d-flex justify-content-between">
+                        <strong class="d-block px-2 bg-dark" style="height: 2rem">jQuery</strong>
+                        <span class="px-2 h-100">70 %</span>
+                    </div>
+                </div>
+            </div>
+            <div class="progress mb-1" style="height: 2rem">
+                <div class="progress-bar" id="bar6" data-progress="60%" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                    <div class="d-flex justify-content-between">
+                        <strong class="d-block px-2 bg-dark" style="height: 2rem">PHP</strong>
+                        <span class="px-2 h-100">60 %</span>
+                    </div>
+                </div>
+            </div>
+            <div class="progress mb-1" style="height: 2rem">
+                <div class="progress-bar" id="bar7" data-progress="60%" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                    <div class="d-flex justify-content-between">
+                        <strong class="d-block px-2 bg-dark" style="height: 2rem">Laravel</strong>
+                        <span class="px-2 h-100">60 %</span>
+                    </div>
+                </div>
+            </div>
+            <div class="progress mb-1" style="height: 2rem">
+                <div class="progress-bar" id="bar8" data-progress="50%" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                    <div class="d-flex justify-content-between">
+                        <strong class="d-block px-2 bg-dark" style="height: 2rem">UX</strong>
+                        <span class="px-2 h-100">50 %</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
         </section>
 
         <script>
-            $('.my-progress').appear();
+            $('.progress').appear();
 
             function progress(barID, value) {
                 $(barID).animate({
@@ -174,15 +201,15 @@
                 }, 800);
             }
 
-            $('.my-progress').on('appear', function () {
+            $('.progress').on('appear', function () {
                 progress('#bar1', '80%');
                 progress('#bar2', '80%');
                 progress('#bar3', '70%');
                 progress('#bar4', '60%');
-                progress('#bar5', '60%');
+                progress('#bar5', '70%');
                 progress('#bar6', '60%');
-                progress('#bar7', '50%');
-                progress('#bar8', '70%');
+                progress('#bar7', '60%');
+                progress('#bar8', '50%');
 
 
             });

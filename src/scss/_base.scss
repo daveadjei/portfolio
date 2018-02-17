@@ -1,5 +1,13 @@
+*{
+    transition: none !important;
+
+}
+
+
+
 html {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 
 .jumbotron {
@@ -32,27 +40,35 @@ h2 {
 }
 
 
-.my-progress{
-    width: 100%;
-    padding: 10px;
-    background-color: white;
-    transition: 20s;
-}
+// .my-progress{
+//     width: 100%;
+//     padding: 10px;
+//     background-color: white;
+//     transition: 20s;
+// }
+
+// .progress-bar{
+//     transition: none;
+// }
 
 
-.bar {
-    width: 0%;
-    height: 1.5rem;
-   background-color: #F0c484;
-   margin-bottom: 10px;
-}
+// .bar {
+//     width: 0%;
+//     height: 1.5rem;
+//    background-color: #F0c484;
+//    margin-bottom: 10px;
+//    font-weight: 600;
 
-.myLabel{
-    background-color: #695245;
-    margin-bottom: 10px;
-    height: 1.5rem;
+// }
 
-}
+// .myLabel{
+//     background-color: #695245;
+//     margin-bottom: 10px;
+//     height: 1.5rem;
+//     font-weight: 600;
+//     color: white;
+
+// }
 
 div.col-3{
     padding:10px 0;
