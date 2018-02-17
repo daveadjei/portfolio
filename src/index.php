@@ -136,28 +136,28 @@
 
                 <div class="my-progress col-9">
 
-                    <div class="Barcontainer">
+                    <div class="bar-container">
                         <div class="bar" id="bar1">80%</div>
                     </div>
-                    <div class="Barcontainer">
+                    <div class="bar-container">
                         <div class="bar" id="bar2">80%</div>
                     </div>
-                    <div class="Barcontainer">
+                    <div class="bar-container">
                         <div class="bar" id="bar3">70%</div>
                     </div>
-                    <div class="Barcontainer">
+                    <div class="bar-container">
                         <div class="bar" id="bar4">60%</div>
                     </div>
-                    <div class="Barcontainer">
+                    <div class="bar-container">
                         <div class="bar" id="bar5">60%</div>
                     </div>
-                    <div class="Barcontainer">
+                    <div class="bar-container">
                         <div class="bar" id="bar6">60%</div>
                     </div>
-                    <div class="Barcontainer">
+                    <div class="bar-container">
                         <div class="bar" id="bar7">50%</div>
                     </div>
-                    <div class="Barcontainer">
+                    <div class="bar-container">
                         <div class="bar" id="bar8">70%</div>
 
                     </div>
@@ -171,7 +171,7 @@
             function progress(barID, value) {
                 $(barID).animate({
                     'width': value
-                }, 500);
+                }, 800);
             }
 
             $('.my-progress').on('appear', function () {
