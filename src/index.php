@@ -353,38 +353,76 @@
 
         <section id="contact" class="container section--dark">
             <h2>Contact me</h2>
-            <form action="http://cbp.vosk-design.cz/process-form.php" method="POST" class="form-contact">
 
-                <div class="row">
-                    <div class="col-md-6 info">
-                        <label class="ml-4" for="firstname">First Name</label>
-                        <input class="mr-4" type="text" id="firstname" name="firstname" required>
-                    </div>
-                    <div class="col-md-6 info">
-                        <label class="ml-4" for="lastname">Last Name</label>
-                        <input class="mr-4" type="text" id="lastname" name="lastname" required>
-                    </div>
-                </div>
 
-                <div class="row">
-                    <div class="col-md-6 info">
-                        <label class="ml-4" for="email">E-mail</label>
-                        <input class="mr-4" type="email" id="email" name="email" required>
+
+                <form action="" method="POST" class="form-contact">
+
+                    <!-- http://cbp.vosk-design.cz/process-form.php -->
+
+                    <div class="row">
+                        <div class="col-md-6 info">
+                            <label class="ml-4" for="firstname">First Name</label>
+                            <input class="mr-4" type="text" id="firstname" name="firstname" required>
+                        </div>
+                        <div class="col-md-6 info">
+                            <label class="ml-4" for="lastname">Last Name</label>
+                            <input class="mr-4" type="text" id="lastname" name="lastname" required>
+                        </div>
                     </div>
-                    <div class="col-md-6 info">
-                        <label class="ml-4" for="phone">Phone</label>
-                        <input class="mr-4" type="tel" id="phone" name="phone">
+
+                    <div class="row">
+                        <div class="col-md-6 info">
+                            <label class="ml-4" for="email">E-mail</label>
+                            <input class="mr-4" type="email" id="email" name="email" required>
+                        </div>
+                        <div class="col-md-6 info">
+                            <label class="ml-4" for="phone">Phone</label>
+                            <input class="mr-4" type="tel" id="phone" name="phone">
+                        </div>
                     </div>
-                </div>
-                <br/>
-                <div class="text-center">
-                    <label for="message">Message</label>
                     <br/>
-                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
-                    <br/>
-                    <button class="btn btn-primary ">Send my message</button>
-                </div>
-            </form>
+                    <div class="text-center">
+                        <label for="text">Message</label>
+                        <br/>
+                        <textarea name="text" id="text" cols="30" rows="10"></textarea>
+                        <br/>
+                        <button class="btn btn-primary ">Send my message</button>
+                    </div>
+                </form>
+
+                <?php
+            // Initialization part
+            ini_set('error_reporting', 1);
+
+            $dbh = new PDO('mysql:host=localhost;dbname=portfolio', 'root', 'zLe72ete');
+            $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            if (count($_POST) > 0)
+            {
+                $first_name = filter_input(INPUT_POST, 'firstname');
+                $last_name = filter_input(INPUT_POST, 'lastname');
+                $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+                $phone = filter_input(INPUT_POST, 'phone');
+                $text = filter_input(INPUT_POST, 'text');
+
+                // var_dump($_POST);
+
+                if (!$first_name || !$last_name || !$email || $text =='')
+                {
+                    header('Location: ? success=no');
+                }
+                else
+                {
+                    $statement = $dbh->prepare('INSERT INTO messages (first_name, last_name, email, phone, `text`) VALUES (?, ?, ?,?,?)');
+		            $result = $statement->execute([$first_name, $last_name, $email, $phone, $text]);
+                    header('Location: ? success=yes');
+                    echo 'Okay you have successfully filled the form';
+
+                }
+            }
+
+             ?>
         </section>
         <hr>
 
